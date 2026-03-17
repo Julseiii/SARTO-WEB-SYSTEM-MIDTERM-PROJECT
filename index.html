@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIXELATED JULS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+  <!-- PIXEL CURSOR -->
+  <canvas id="cursor" width="24" height="24"></canvas>
+  <div id="cursor-trail"></div>
+
+  <!-- INTERACTIVE BACKGROUND -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+
+  <!-- ACHIEVEMENT POPUP -->
+  <div id="achievement">
+    <div class="achievement-inner">
+      <div class="achievement-icon">🏆</div>
+      <div class="achievement-text">
+        <span class="achievement-title">★ ACHIEVEMENT UNLOCKED ★</span>
+        <span class="achievement-desc" id="achievement-desc">Page Visited!</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-wrapper">
+
+    <!-- NAV -->
+    <nav>
+      <div class="nav-inner">
+        <div class="wordmark">✦ JULS.ME ✦</div>
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#background">BACKGROUND</a></li>
+          <li><a href="#hobbies">HOBBIES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SECTION 1: HOME -->
+    <section id="home">
+      <div class="hero-avatar-wrap">
+        <div class="hero-avatar photo">
+          <img src="media/profile-1.jpg" alt="Julius Sarto" class="profile-photo">
+          <div class="photo-scanlines"></div>
+        </div>
+        <div class="avatar-ring-outer"></div>
+        <div class="avatar-ring-inner"></div>
+        <div class="hp-bar" style="bottom:-45px">
+          <span class="hp-bar-label">HP ████████░░ 85/100</span>
+          <div class="hp-bar-track">
+            <div class="hp-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:50px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+        <div class="stat-box"><span>AGE</span><span class="stat-val">18</span></div>
+        <div class="stat-box"><span>POGI</span><span class="stat-val">YES</span></div>
+
+      </div>
+      <h1 class="hero-name glitch" data-text="I'm Julius Sarto">I'm Julius Sarto</h1>
+      <div class="type-text"><span id="typewriter"></span><span class="cursor-blink">█</span></div>
+      <div class="hero-intro pixel-box retro-corner"><span>
+          <p>▶Hello! My name is Julius B. Sarto, an 18-year-old student from San Vicente Ogbon, Nabua, Camarines Sur. I
+            was born on November 19, 2007. I am currently a first-year Bachelor of Science in Information Technology
+            (BSIT) student at Camarines Sur Polytechnic Colleges (CSPC). <br> <br>
+            As a student, I am working hard to learn more about technology and improve my skills in programming and
+            computer systems. I enjoy exploring new things related to IT and gaining knowledge that can help me in the
+            future. My goal is to become a successful computer programmer someday. <br> <br>
+            This webpage shares a short story about myself, including my background, experiences, and my journey as a
+            student who is pursuing his dreams in the field of information technology.</p>
+        </span></div>
+      <a href="#about" class="pixel-btn">▶ START GAME</a>
+    </section>
+
+    <!-- SECTION 2: ABOUT -->
+    <section id="about">
+      <h2 class="section-title">★ ABOUT ★</h2>
+      <div class="content-grid fade-in">
+        <div class="about-images">
+          <div class="img-placeholder pixel-box">
+            <span>
+              <img src="media/IMG_20251201_225027_183.jpg" alt="Achievement Icon"
+                style="width:100%;height:100%;object-fit:contain">
+            </span>
+            <span class="img-label">PHOTO.exe</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3
+            style="font-size:11px;color:var(--pixel-cyan);margin-bottom:20px;text-shadow:0 0 10px rgba(0,255,255,0.5)">
+            ▌ PERSONAL </h3>
+          <div class="pixel-box" style="margin-bottom:20px">
+            <p>NAME: JULIUS, BUYNAY, SARTO <br>
+              AGE: 18 <br>
+              BIRTHDAY: NOVEMBER 19, 2007 <br>
+              HOMETOWN: SAN VICENTE OGBON, NABUA, CAMARINES SUR <br>
+            </p>
+
+            <p>Father: Rodolfo B. Sarto Jr. <br>
+              Mother: Lolita B. Sarto <br>
+            </p>
+          </div>
+          <div class="pixel-divider"></div>
+        </div>
+      </div>
+
+      <div class="content-grid fade-in">
+        <div class="about-images">
+          <div class="img-placeholder pixel-box">
+            <span>
+              <img src="media/AUDI2.jpg" alt="Achievement Icon" style="width:100%;height:100%;object-fit:contain">
+            </span>
+            <span class="img-label">PHOTO.exe</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3
+            style="font-size:11px;color:var(--pixel-cyan);margin-bottom:20px;text-shadow:0 0 10px rgba(0,255,255,0.5)">
+            ▌ SKILLS AND INTERESTS </h3>
+          <div class="pixel-box" style="margin-bottom:20px">
+            <p> + Programming <br>
+              + Technology <br>
+              + Designing pubmats <br>
+              + Learning new software <br>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BACKGROUND -->
+    <section id="background">
+      <h2 class="section-title">★ BACKGROUND ★</h2>
+      <div class="timeline fade-in">
+        <div class="timeline-card">
+          <div class="timeline-card-img">
+            <img src="media/Screenshot 2026-02-26 215427.png" alt="Achievement Icon"
+              style="width:100%;height:100%;object-fit:contain">
+            <div class="timeline-card-badge">LVL 1-6</div>
+          </div>
+          <div class="timeline-card-body">
+            <div class="timeline-card-title">ELEMENTARY</div>
+            <p>Where the adventure began. Learned the basic skills: reading, writing, friendship. Unlocked: Curiosity
+              +50, Creativity +30. First boss battle: Math tests. Victory!</p>
+          </div>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-card-img">
+            <img src="media/IMG_6571.JPG" alt="Achievement Icon" style="width:100%;height:100%;object-fit:contain">
+            <div class="timeline-card-badge">LVL 7-12</div>
+          </div>
+          <div class="timeline-card-body">
+            <div class="timeline-card-title">SECONDARY SCHOOL</div>
+            <p>The side quests multiplied. Discovered new talents, made lifelong allies, faced the dreaded Exams dungeon
+              multiple times. Stats upgraded significantly.</p>
+          </div>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-card-img">
+            <img src="media/Camarines-sur-polytechnic-colleges (1).jpg" alt="Achievement Icon"
+              style="width:100%;height:100%;object-fit:contain">
+            <div class="timeline-card-badge">Currently Enrolled as 1st Year College</div>
+          </div>
+          <div class="timeline-card-body">
+            <div class="timeline-card-title">COLLEGE</div>
+            <p>Entered the advanced realm of higher learning. Specialization unlocked. Met extraordinary characters,
+              forged skills for the final chapter: the real world.</p>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="recent-achiv">
+        <h2 class="section-title">★ RECENT ACHIEVEMENTS ★</h2>
+      </div>
+
+      <div class="timeline fade-in">
+        <div class="timeline-card">
+          <div class="timeline-card-img achievement-carousel-wrap">
+            <div class="achievement-carousel-track" id="achievementTrack">
+              <img src="media/achievement-1.jpg" alt="Achievement Photo 1" class="achievement-slide active-slide">
+              <img src="media/achievement-2.jpg" alt="Achievement Photo 2" class="achievement-slide">
+              <img src="media/achievement-3.jpg" alt="Achievement Photo 3" class="achievement-slide">
+              <img src="media/achievement-4.jpg" alt="Achievement Photo 4" class="achievement-slide">
+              <img src="media/achievement-5.jpg" alt="Achievement Photo 5" class="achievement-slide">
+            </div>
+            <button class="carousel-arrow carousel-arrow-left" id="achPrev" aria-label="Previous photo">◀</button>
+            <button class="carousel-arrow carousel-arrow-right" id="achNext" aria-label="Next photo">▶</button>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <div class="timeline-card-badge">February 20-22, 2026</div>
+          </div>
+          <div class="timeline-card-body">
+            <div class="timeline-card-title">1st Naga City Mayoral Hackathon</div>
+            <p>One of my proudest recent achievements was participating in the 1st Naga City Mayoral Hackathon. Being
+              part of this event gave me the opportunity to showcase my creativity, problem-solving skills, and passion
+              for technology. The hackathon gathered students and aspiring developers who worked together to create
+              innovative digital solutions that could help improve communities and local services. <br><br>
+              Joining this competition was a meaningful experience for me as a BSIT student at CSPC because it allowed
+              me to apply what I am learning in school to real-world challenges. It also helped me develop teamwork,
+              critical thinking, and confidence in presenting ideas. This achievement motivates me even more to continue
+              improving my programming skills and to pursue my dream of becoming a computer programmer in the future.
+            </p>
+          </div>
+        </div>
+        <div
+          style="margin-top:30px;font-family:'VT323',monospace;font-size:19px;color:var(--purple-glow);text-align:center;opacity:0.7">
+          ▼ MORE CHAPTERS LOADING... STAY TUNED ▼
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HOBBIES -->
+    <section id="hobbies">
+      <h2 class="section-title">★ HOBBIES ★</h2>
+      <div class="hobbies-grid fade-in">
+
+        <div class="hobby-card" style="--hobby-color:#00ffff;--hobby-rgb:0,255,255;--delay:0s">
+          <span class="hobby-icon">
+            <img src="media/Minecraft_2024_cover_art.png" alt="Achievement Icon"
+              style="width:100%;height:100%;object-fit:contain">
+          </span>
+          <h3>GAMING</h3>
+          <p>In my free time, I enjoy playing online games. I like open-world games such as Minecraft, GTA, and Roblox
+            because they allow me to explore, build, and experience different virtual worlds. I also play competitive
+            games like Mobile Legends and Call of Duty: Mobile, where teamwork, strategy, and quick decision-making are
+            important. Gaming is one of my ways to relax, have fun, and connect with friends.</p>
+          <div class="pixel-divider"></div>
+          <span class="xp-label">XP LEVEL</span>
+          <div class="xp-bar">
+            <div class="xp-fill" style="--hobby-color:#00ffff;width:90%"></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" style="--hobby-color:#ff00aa;--hobby-rgb:255,0,170;--delay:0.2s">
+          <span class="hobby-icon">
+            <img src="media/Screenshot_2026-03-03-00-03-09-837_com.instagram.android (1).jpg" alt="Achievement Icon"
+              style="width:100%;height:100%;object-fit:contain">
+          </span>
+          <h3>MUSIC PRODUCTION</h3>
+          <p>I also enjoy creating music and making my own beats. I experiment with different genres, but I mostly
+            produce R&B, hip-hop, guitar-based, and dark trap beats. Music production allows me to express creativity
+            and explore different sounds and styles. It is one of my hobbies where I enjoy turning ideas into unique
+            beats and rhythms.</p>
+          <div class="pixel-divider"></div>
+          <span class="xp-label">XP LEVEL</span>
+          <div class="xp-bar">
+            <div class="xp-fill" style="--hobby-color:#ff00aa;width:75%"></div>
+          </div>
+        </div>
+        <div class="hobby-card" style="--hobby-color:#ffe600;--hobby-rgb:255,230,0;--delay:0.4s">
+          <span class="hobby-icon">
+            <img src="media/IMG_20251205_024444_484.jpg" alt="Achievement Icon"
+              style="width:100%;height:100%;object-fit:contain">
+          </span>
+          <h3>VIDEO EDITING</h3>
+          <p>Video editing is one of my hobbies that I enjoy doing in my free time. I like editing videos and turning
+            raw clips into creative and engaging content. Through video editing, I can express my ideas, improve my
+            creativity, and enhance the overall quality of visual storytelling.</p>
+          <div class="pixel-divider"></div>
+          <span class="xp-label">XP LEVEL</span>
+          <div class="xp-bar">
+            <div class="xp-fill" style="--hobby-color:#ffe600;width:65%"></div>
+          </div>
+        </div>
+        <div class="hobby-card" style="--hobby-color:#00ff88;--hobby-rgb:0,255,136;--delay:0.6s">
+          <span class="hobby-icon">
+            <img src="media/Messenger_creation_A10DB1DA-C8E7-475C-9343-0A0EEAABBF88.jpeg" alt="Achievement Icon"
+              style="width:100%;height:100%;object-fit:contain">
+          </span>
+          <h3>GRAPHICS DESIGNING</h3>
+          <p>Graphic designing is one of my creative hobbies. I enjoy designing visuals such as posters, pubmats, and
+            digital graphics. It allows me to express ideas through colors, layouts, and design elements while improving
+            my creativity and attention to detail.</p>
+          <div class="pixel-divider"></div>
+          <span class="xp-label">XP LEVEL</span>
+          <div class="xp-bar">
+            <div class="xp-fill" style="--hobby-color:#00ff88;width:80%"></div>
+          </div>
+        </div>
+        <div class="hobby-card" style="--hobby-color:#b44fff;--hobby-rgb:180,79,255;--delay:0.8s">
+          <span class="hobby-icon">
+            <img src="media/PREVIEW21424.jpg" alt="Achievement Icon" style="width:100%;height:100%;object-fit:contain">
+          </span>
+          <h3>FREELANCING</h3>
+          <p>I also work as a freelance graphic designer, where I create custom designs for different clients. Most of
+            my work includes sublimation designs for basketball jerseys, organization polo shirts, and other apparel.
+            Through freelancing, I improve my design skills, gain experience working with clients, and turn my
+            creativity into real projects.</p>
+          <div class="pixel-divider"></div>
+          <span class="xp-label">XP LEVEL</span>
+          <div class="xp-bar">
+            <div class="xp-fill" style="--hobby-color:#b44fff;width:55%"></div>
+          </div>
+        </div>
+        <div class="hobby-card" style="--hobby-color:#ff7700;--hobby-rgb:255,119,0;--delay:1s">
+          <span class="hobby-icon">🌏</span>
+          <h3>DISCOVERING NEW STUFF</h3>
+          <p>Discovering new maps in real life. Every destination = new achievement unlocked.</p>
+          <div class="pixel-divider"></div>
+          <span class="xp-label">XP LEVEL</span>
+          <div class="xp-bar">
+            <div class="xp-fill" style="--hobby-color:#ff7700;width:45%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">★ CONTACT ★</h2>
+      <div class="contact-grid fade-in">
+        <div>
+          <h3 style="font-size:9px;color:var(--pixel-cyan);margin-bottom:20px">▌FIND ME ON:</h3>
+          <a href="#" class="social-link" style="--link-color:#ff00aa">
+            <div class="social-preview"><i class="fa-brands fa-instagram" style="font-size:24px;color:#ff00aa"></i>
+            </div>
+            <div class="social-info"><span class="social-name">INSTAGRAM</span><span
+                class="social-handle">@julsei.wav</span></div>
+            <span class="social-arrow">▶</span>
+          </a>
+          <a href="#" class="social-link" style="--link-color:#1877f2">
+            <div class="social-preview"><i class="fa-brands fa-facebook-f" style="font-size:24px;color:#1877f2"></i>
+            </div>
+            <div class="social-info"><span class="social-name">FACEBOOK</span><span class="social-handle">Julius
+                Sarto</span></div>
+            <span class="social-arrow">▶</span>
+          </a>
+          <a href="#" class="social-link" style="--link-color:#00ffff">
+            <div class="social-preview"><i class="fa-brands fa-tiktok" style="font-size:24px;color:#00ffff"></i></div>
+            <div class="social-info"><span class="social-name">TIKTOK</span><span class="social-handle">@juls.efx</span>
+            </div>
+            <span class="social-arrow">▶</span>
+          </a>
+          <a href="#" class="social-link" style="--link-color:#ffe600">
+            <div class="social-preview"><i class="fa-solid fa-envelope" style="font-size:24px;color:#ffe600"></i></div>
+            <div class="social-info"><span class="social-name">EMAIL</span><span
+                class="social-handle">jbsarto19@email.com</span></div>
+            <span class="social-arrow">▶</span>
+          </a>
+        </div>
+        <div class="contact-msg pixel-box retro-corner"><span>
+            <p>▶ Want to connect with me? Feel free to reach out by clicking the Send Message button. Whether you have
+              questions, project ideas, collaborations, or just want to say hello, I’m always open to communicating with
+              others.</p>
+            <p>By clicking the button, you can easily send me your message, and I’ll make sure to respond as soon as
+              possible. I value clear and respectful communication, so don’t hesitate to share your thoughts, inquiries,
+              or feedback.</p>
+            <p>Let’s build connections, exchange ideas, and create something meaningful together!</p>
+            <br>
+            <a href="mailto:you@email.com" class="pixel-btn" style="font-size:8px">▶ SEND MESSAGE</a>
+          </span></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>★ MIDTERM PROJECT IN WEB SYSTEMS AND TECHNOLOGY 1 <span>♥</span> DEV BY JULIUS SARTO ★</p>
+      <p style="margin-top:8px;font-size:7px">2026</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
